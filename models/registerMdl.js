@@ -105,13 +105,6 @@ const registerSchema = new mongoose.Schema({
               `Password should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least of 6 characters.`,
         },
     }
-
-    // /** Specification of Password field **/
-    // confirmpassword: {
-    //      type:  String,
-    //      required:  "Please repeat your password.",
-    //      trim:  true,
-    // }
 });
 
 /**
