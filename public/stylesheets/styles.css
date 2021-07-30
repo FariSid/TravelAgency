@@ -1,0 +1,570 @@
+/**
+    * Name: Fariha Siddiqui
+    * Student ID: 000880957
+    * Date: 26-07-2021
+    * Purpose: Assignment 1-6 of CPRG-008
+    **/
+
+    @charset "UTF-8";
+    /* CSS Document */
+   
+    /* ------------------------------- General theme consistent across website -------------------------------  */
+
+    * { 
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        box-sizing: border-box;
+    }
+
+    /* ------------------------------------ Body -----------------------------------------  */
+
+    body {
+        line-height: 1.6;
+        /* set the margin to 0 so you control the margin not the browser default  */
+        margin: 0px;
+    }
+   
+    /* ------------------------------- Styling the Labels in Forms -------------------------------  */
+
+    label {
+        color: darkblue;
+        font-weight: 400;
+        font-size: x-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+   
+    /* ------------------------------- Styling All Heading Elements -------------------------------  */
+
+    h1 {
+        color:#05a2e8;
+        font-size: 7vw;
+        line-height: 10%;
+    }
+    h2 {
+        color: #ee8f43 ;
+        font-size: 3vw;
+        line-height: 100%;
+        font-weight: 400;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    h3 {
+        color:#037AAF;
+        font-size: 1.75vw;
+        line-height: 100%;
+        font-weight: 300;
+    }
+    h4 {
+        color: #037AAF;
+        font-size: 1.3vw;
+        line-height: 155%;
+        font-weight: 400;
+    }
+   
+    /* ------------------------------- Styling Div Elements as Block -------------------------------  */
+
+    div {
+        display: block;
+    }
+
+    /* ------------------------------- Links -------------------------------  */
+
+    a {
+        color:#05a2e8;
+        text-decoration: none;
+    }
+   
+    a:hover {
+        color:#07f4ff;
+    }
+   
+    /* ------------------------------- Images -------------------------------  */
+
+    figure {
+        margin: 0px;
+        position: relative;
+        text-align: center;
+        color: white;
+        font-style: italic;
+        font-size: 1vw;
+    }
+    /* ------------------------------- Caption on Images -------------------------------  */
+    figcaption {
+        position: absolute;
+        bottom: .8vw;
+        left: .5vw;
+    }
+   
+    /* -------------------------------Header Section------------------------------- */
+   
+    /* --------------------- Navigation Panel -------------------------- */
+
+    nav {
+        padding-right: 9vw;
+        padding: 0px 0 0px !important;
+	    height: 75px !important;
+	    background: white !important;
+	    box-shadow: inset 0px 0px 30px -15px rgb(0 0 0 / 50%), 
+		    		inset 0px 0px 15px -30px rgb(0 0 0 / 50%)
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-size: 2vw;
+    }
+    /* ----------------- List Items in Navigation Panel ----------------- */
+    nav li {
+        float: left;
+        margin-left: 0px;
+    }
+    nav li a {
+        display: block;
+        color: #ff790d;
+        text-align: center;
+        padding:  1vw; 
+        text-decoration: none;
+    }
+    nav li a:hover {
+        background-color:lightskyblue;
+        color:#fff;
+    }
+    .keepright {
+	    float:right;
+	    text-align: center;
+    }
+    .keepcenter {
+	    float:none;
+	    text-align: center;
+    }
+
+    /* ------------------------------- Validation Errors -------------------------------  */
+
+    .validation-errors {
+    	color: #842029;
+        background-color: #f8d7da;
+        border-color: #f5c2c7;
+        position: relative;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+
+    .register-grid-container .validation-errors{
+        width: 900px;
+    }
+
+    /* ------------------------------- Banner -------------------------------  */
+
+    .bannerindex {
+	    background-image: url("../images/travel_img_cover.jpg");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+	    padding: 8vw 10vw;
+    }
+    .bannergallery {
+	    background-image: url("../images/cover.jpg");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+	    padding: 8vw 10vw;
+    }
+    .bannercontact {
+	    background-image: url("../images/contacts_cover_best.png");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+	    padding: 8vw 10vw;
+    }
+    .bannerregister {
+        background-image: url("../images/register-banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 8vw 10vw;
+    }
+    .traveltext {
+	    width: 100%;
+	    text-align: center;
+	    margin-top: 0%;
+    }
+    .bannerindex h1, .bannercontact h1{
+	    color:greenyellow;
+    }
+    .bannergallery h1{
+	    color: darkviolet;
+    }
+   
+    /* -------------------------------Content section - Home page grid layout------------------------------- */
+
+    .grid-container {
+	    display: grid;
+	    grid-template-areas: 
+		    'intro intro intro intro events' 
+		    'call1 call1 call2 call2 events' 
+		    'call3 call3 call4 call4 events' 
+		    'art art art art events';
+	    grid-gap: 2vw; 
+	    padding: 4vw 8vw;
+    } 
+   
+    /* ------------------------------- Styling the Introduction Area------------------------------- */
+
+    .intro {
+	    grid-area: intro;
+	    background-color: #fff;
+    }
+   
+    .p-lr {
+	    padding: 0vw 2vw;
+    }
+
+    .intro #changingfontstyle{
+	    text-align: left;
+	    font-size: 20px;
+    }
+   
+    .callouts img {
+	    width: 100%;
+    }
+    /* Style the 1st callout */
+    .call1 {
+	    grid-area: call1;
+    }
+   
+    /* Style the 2nd callout */
+    .call2 {
+	    grid-area: call2;
+    }
+   
+    /* Style the 3rd callout */
+    .call3 {
+	    grid-area: call3;
+    }
+   
+    /* Style the 4th callout */
+    .call4 {
+        grid-area: call4;
+    }
+   
+    /* Style the article section */
+    .art {
+        grid-area: art;
+    }
+    /* Style the article details section */
+    .events {
+        grid-area: events;
+        padding: 1vw 2vw;
+        background-color:#fdb479;
+        color: black;
+    }
+
+    /* -------------------------------Styling Side Panel in Home Page-------------------------------  */
+
+    .events h4 {
+        color: maroon;
+        font-size: 30px;
+        font-family: Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
+    }
+   
+    .events hr {
+        border-style: double;
+		border-width: 1px;
+    }
+   
+    #h3inevents
+    {
+        color:royalblue;
+        font-size: 1.6vw;
+        line-height: 100%;
+        font-weight: 300;
+        font-style: normal;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    /* -------------------------------Styling Contact Us Form-------------------------------  */
+
+    .contact-grid-container {
+        display: grid;
+        grid-template-areas: 
+            'intro intro intro' 
+            'map map contactform';
+        grid-gap: 2vw; 
+        padding: 4vw 8vw;
+    } 
+
+    /* -------------------------------Styling Registation Form-------------------------------  */
+    
+    .register-grid-container {
+        display: grid;
+        grid-template-areas: 
+            'intro intro intro' 
+            'map map registerform';
+        grid-gap: 1vw; 
+        padding: 1vw 8vw;
+        justify-content: center;
+    } 
+   
+    /* ----------------- Changing Font Style ----------------- */
+    
+    #changingfont
+    {
+        font-size: 30px;
+        font-family: 'sans-serif';
+        color: #fdb479;
+        line-height: normal;
+        font-style: italic;
+        text-align: center;
+    }
+
+    #changingfontstyle
+    {
+        font-size: 25px;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        line-height: normal;
+        text-align: center;
+    }
+
+    .cols-row h4
+    {
+        font-size: 25px;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        line-height: normal;
+        color: rgb(24, 135, 199);
+    }
+
+    /* -------------------------------Styling Contact Form-------------------------------  */
+    
+    .contactform {
+        grid-area: contactform;
+    }
+    
+    /* ----------------- Pictures beside Contact Form ----------------- */
+    .map {
+        grid-area: map;
+    }
+    .map img {
+        width: 100%;
+        height: auto;
+    }
+   
+    /* ----------------- Styling Text Input in Forms ----------------- */
+   
+    input[type=text],input[type=email], textarea, input[type=password] {
+        font-size: 1vw;
+        width: 100%;
+        padding: 1vw;
+        margin: 1vw 0;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 30px;
+    }
+
+    /* ----------------- Styling Submit Button in Form ----------------- */
+   
+    .roundbtn {
+        border-radius: 40px;
+        border: double;
+        background-color:rgb(0, 136, 255);
+        color: white;
+        padding: 0.7vw;
+        width: 80%;
+        font-size: 1.8vw;
+    }
+   
+    /* -------------------------------Content section - gallery page flex layout------------------------------- */
+
+    .galleryIntro {
+        padding: 2vw 4vw 0.5vw 8vw;
+    }
+    .flex-container {
+        display: flex;
+        padding: 1vw 8vw 4vw 8vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .flex-item {
+        margin: 1vw;
+    }
+
+    /* -------------------------------Styling Sorry & Thank you Message-------------------------------  */
+
+    body .cols-row {
+        max-width: 69.17647059em;
+        padding-right: .70588235em;
+    }
+    /* -------------------------------For Styling Sorry Message-------------------------------  */
+    .travel {
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 27px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 1.41;
+        color:black;
+        padding: 40px 47px;
+        /* Inserting an image as background */
+        background: linear-gradient(to right,rgba(80,80,80,0.001),rgba(202, 165, 165, 0) 80%,rgba(80,80,80,0.00001)),url(../images/error404.jpg) center no-repeat;
+        height: 100%; 
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* ---------------------Styling Fonts of Sorry Message-----------------------  */
+    .travel__title {
+        font-family: centrano1-extrabold,'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 50px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: -1.8px;
+        max-width: 80%;
+    }
+    .travel__subtitle {
+        margin: 10px 0;
+        max-width: 83%;
+    }
+    .travel__title, .travel__subtitle {
+        color: inherit;
+    }
+    .travel__title--narrow {
+        max-width: 100%;
+    }
+
+    /* ------------------------------- Menu Items -------------------------------- */
+
+    /* For Placing & Styling Menu that contain links to all pages */
+    .travel__menu {
+        list-style: none;
+        margin-top: 35px;
+        padding: 0;
+    }
+    /* For Styling Each Menu item that contain links to different pages */
+    .travel__menu-item {
+        text-decoration: none;
+        margin-bottom: 100px;
+        padding: 0;
+    }
+    /* For styling different links in Menu bar */
+    .travel__menu-item a {
+        color: black;
+        align-items: stretch;
+        padding: 15px;
+        background-color: rgba(245, 95, 8, 0.876);
+        font-style: normal;
+        font-size: 25px;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .travel__menu-item a :hover {
+        font-style: underline;
+    }
+
+    /* -------------------------------Styling Thank you Message-------------------------------  */
+
+    .travelthankyou {
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 27px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 1.41;
+        color:black;
+        padding: 40px 47px;
+        /* Inserting an image as background */
+        background: linear-gradient(to right,rgba(80,80,80,0.001),rgba(202, 165, 165, 0) 80%,rgba(80,80,80,0.00001)),url(../images/sent-successfully.png) center no-repeat;
+        height: 100%; 
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .travelthankyou p{
+        color: rgb(24, 135, 199);
+    }
+
+    
+    /* -------------------------------Footer Section------------------------------- */
+
+    footer {
+        padding: 1vw 2vw;
+        background-color: #037AAF;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+    }
+    footer a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color:darksalmon;
+    }
+    
+    span {
+        display: inline-block;
+        animation: weeee 6s linear infinite alternate;
+        font-size:75%;
+        font-weight: bold;
+    }
+  
+    @keyframes weeee {
+        0% { color: red; }
+        25% { color: blue; }
+        50% { color: green; }
+        75% { color: orange; }
+        100% { transform: translateX(90%); color: purple; }
+    }
+
+    /*---------------------------------- Styles for Responsive Design ----------------------------------- */
+   
+    @media only screen and (max-width: 768px) {
+        h2 {
+            font-size: 5vw;
+        }
+        nav ul {
+            font-size: 3vw;
+        }
+        h3 {
+            font-size: 4vw;
+        }
+        h4 {
+            font-size: 3.5vw;
+        }
+        figure {
+            font-size: 2.5vw;
+        }
+        .grid-container {
+            grid-template-areas: 
+            'intro' 
+            'call1'
+            'call2' 
+            'call3' 
+            'call4' 
+            'events' 
+            'art';
+        }
+        .contact-grid-container {
+            grid-template-areas: 
+                'intro' 
+                'contactform'
+                'map';
+        } 
+        input[type=text], textarea {
+            font-size: 3vw;
+        }
+        .roundbtn {
+            font-size: 5vw;
+        }
+    } 
+   
+    @media only screen and (min-width: 1200px) {
+        h2 {
+        font-size: 2.5vw;
+        }
+        nav ul {
+        font-size: 2vw;
+        }
+    } 

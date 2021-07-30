@@ -1,0 +1,83 @@
+// --------------------------- Layout extended to Contact.pug file --------------------------- //
+extends layout
+
+block content
+
+  // --------------------------- Banner --------------------------- //
+  .bannerindex
+    div
+      h1 Travel
+      h2 Find the vacation that&apos;s right for you!
+
+  // --------------------------- Introduction of the Website --------------------------- //
+  .grid-container
+    .intro.p-lr
+      h2
+        b  Introduction
+      h4#changingfontstyle
+        b Tried and Trusted
+        |  - We&apos;re trusted worldwide by 400 million travellers just like you.
+        br
+        b Your One-stop Travel Partner
+        |  - Your search ends here. We&apos;ve got your entire trip covered!
+        br
+        b Reliable Support
+        |  - We&apos;re here for you. Reach out to us anytime by phone, email, or chat.
+      h2(style='text-align: center;')
+        b Overdue for an escape?
+      h4#changingfontstyle
+        | Take a peek at these cozy cabins, ready to become your new home away from home.
+        | Treat yourself to long walks on the beach and incredible vacation offers with flexible booking options for extra peace of mind.
+
+    // ------------ Packages Panel with Price deals ------------- //
+    .events.p-lr
+      h4 Elk Ridge by Rocky Mountain Resorts
+      h3#h3inevents
+        | Denver 
+        br
+        |  Price: $124 per night
+      hr
+      h4 Colorado Creek Cabins
+      h3#h3inevents
+        | Liverpool 
+        br
+        |  Price: $249 per night
+      hr
+      h4 Firseside Resort
+      h3#h3inevents
+        | Paris 
+        br
+        |  Price: $278 per night
+      hr
+      h4 Teton Valley Resort
+      h3#h3inevents
+        | Jackson Hole 
+        br
+        |  Price: $219 per night
+      hr
+      h4 Asheville Country Cabins
+      h3#h3inevents
+        | Asheville 
+        br
+        |  Price: $191 per night
+  
+    // ------------ Pictures beside the Packages Panel ------------- //
+    .callouts.call1
+      figure
+        img(src='/images/gallery/100-National-Parks-experiences-you-must-try-V2.jpg', alt='National Parks', width='500', height='350')
+        figcaption National Parks Experiences
+
+    .callouts.call2
+      figure
+        img(src='/images/gallery/17-Washington-Mount-Rainier.jpg', alt='Mount Rainer', width='500', height='350')
+        figcaption Washington Mount Rainier
+
+    .callouts.call3
+      figure
+        img(src='/images/gallery/The-Wave-Parya-Canyon-Vermillion-Cliffs.jpg', alt='The-Wave-Parya-Canyon-Vermillion-Cliffs', width='500', height='400')
+        figcaption The Wave Parya Canyon, Vermillion Cliffs
+
+    .callouts.call4
+      figure
+        img(src='/images/gallery/dry-tortugas-national-park-florida.jpg', alt='dry-tortugas-national-park-florida', width='500', height='400')
+        figcaption Dry Tortugas National park, Florida

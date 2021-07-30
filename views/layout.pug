@@ -1,0 +1,48 @@
+// --------------------------- Layout that will be extended to other pug files --------------------------- //
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title}
+    link(rel='stylesheet', type='text/css', href='/stylesheets/styles.css')
+  header
+
+    // --------------------------- Navigation bar at the top --------------------------- //
+    nav
+      ul
+        // ------------ Logo back to Home ------------- //
+        li
+          a(href='/')
+            img(src='/images/logo.jpg', width='50px', height='40px')
+        // ------------ Link to Home ------------- //
+        li
+          a(href='/')
+            b Home
+        // ------------ Link to About ------------- //
+        li
+          a(href='/about')
+            b About 
+        // ------------ Link to Contact ------------- //
+        li
+          a(href='/contact')
+            b Contact
+        // ------------ Link to Register ------------- //
+        li.keepright
+          a(href='/register')
+            b Register
+
+        // ------------ Show Random Greeting only on Home page ------------- //
+        if home
+          li.keepcenter
+            h3 
+              b #{greet}! It's #{day}!
+
+  // --------------------------- Body --------------------------- //
+  body
+    block content
+
+    // --------------------------- Footer --------------------------- //
+    .container.bg-secondary
+      footer
+        p Copyright &copy; 2021 Travel Services Inc. All Rights Reserved.

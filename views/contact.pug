@@ -1,0 +1,95 @@
+// --------------------------- Layout extended to Contact.pug file --------------------------- //
+extends layout
+
+block content
+
+  // --------------------------- Banner --------------------------- //
+  .bannercontact
+    .traveltext
+      h1  
+      h2(style='color: greenyellow;')
+        b
+          i  Stay Connected!
+
+  // --------------------------- Introduction --------------------------- //
+  .contact-grid-container
+    .intro.p-lr
+      h2(style='color:orange;')
+        b Contact Us
+      h4(style='color: #e88d05', ;='', font-size='40px', font-family='sans-serif', line-height='normal', text-align='center')
+        i
+          | We strive to provide the best service possible with every contact! 
+          | We operate in an industry built on trust. This can only be achieved through communication
+          | and experienced support &ndash; from the first contact past your ten-year anniversary. 
+          br
+          | Have questions about background screening? Our entire team receives specialized training 
+          | &#x9;&#x9;&#x9;&#x9; regularly to ensure you&apos;re receiving the best information possible. 
+          | &#x9;&#x9;&#x9;&#x9;From basic questions to complex compliance inquiries, we&apos;re here to help!
+          br
+          | Interested in learning more about our services? Our Account Executives take
+          | &#x9;&#x9;&#x9;&#x9;the time to discuss your existing background screening program and help you
+          | &#x9;&#x9;&#x9;&#x9; make smart decisions that best meet your needs.
+
+    // --------------------------- Contact Form --------------------------- //
+    .contactform.p-lr
+      // ------------ Display Validation Errors (if any) ------------- //
+      .validation-errors    
+        if errors
+          ul
+            each error in errors
+              li= error
+
+      // ------------ Redirect submitted values to Contact (post) endpoint ------------- //
+      form(action='/contact', method='post')
+
+        // ------------ First Name Textbox ------------- //
+        p
+          label(for='fname') First Name *
+          input#fname(type='text', name='firstname', placeholder='Enter your first name')
+
+        // ------------ Last Name Textbox ------------- //
+        p
+          label(for='lname') Last Name *
+          input#lname(type='text', name='lastname', placeholder='Enter your last name')
+
+        // ------------ Email Address Textbox ------------- //
+        p
+          label(for='emailadd') Email *
+          input#emailadd(type='text', name='email', placeholder='Enter your email address')
+
+        // ------------ Comment Text Area ------------- //
+        p
+          label(for='comment') Comment or Question *
+        textarea#comment(name='comment', placeholder='Any comments or queries..', rows='5')
+
+        // ------------ Newsletter Checkbox ------------- //
+        p
+          label
+            input(type='checkbox', name='lab')
+            |  Add me to your Newsletter
+
+        // ------------ Submit Button ------------- //
+        input.roundbtn(type='submit', value='Submit')
+
+      // ------------ If no Errors then display last contacted visitor's information ------------- //
+      if noerrors
+        br
+        span
+          | Last Contacted on #{date} 
+          br
+          | from #{country} timezone.
+      // ==============  End of Form =================== //
+
+
+    // ------------ Pictures beside the Contact form ------------- //
+    .map
+      figure
+        img(src='/images/gallery/Tide-pool-olympic-national-park-washington1.jpg', alt='Tide-pool-olympic-national-park', width='400', height='300')
+        figcaption Tide Pool Olympic National Park
+
+      br
+
+      figure
+        img(src='/images/gallery/glacier-national-park-montana.jpg', alt='glacier-national-park-montana', width='500', height='400')
+        figcaption Glacier National Park, Montana
+

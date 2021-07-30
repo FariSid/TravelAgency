@@ -1,0 +1,56 @@
+// --------------------------- Layout extended to Register.pug file --------------------------- //
+extends layout
+
+block content
+
+  // --------------------------- Banner --------------------------- //
+  .bannerregister
+    .traveltext
+      h1  
+      h2(style='color: red;')
+        b
+          i  Register Today!
+
+  .register-grid-container
+    .intro.p-lr
+      h2(style='color:orange;')
+        b Register with us
+
+    // --------------------------- Register Form --------------------------- //
+    .p-lr
+      // ------------ Display Validation Errors (if any) ------------- //
+      .validation-errors    
+        if errors
+          ul
+            each error in errors
+              li= error
+
+      // ------------ Redirect submitted values to Register (post) endpoint ------------- //
+      form(action='/register', method='post')
+
+        // ------------ First Name Textbox ------------- //
+        p
+          label(for='fname') First Name *
+          input#fname(type='text', name='firstname', placeholder='Enter your first name')
+
+        // ------------ Last Name Textbox ------------- //
+        p
+          label(for='lname') Last Name *
+          input#lname(type='text', name='lastname', placeholder='Enter your last name')
+
+        // ------------ Email Address Textbox ------------- //
+        p
+          label(for='emailadd') Email *
+          input#emailadd(type='text', name='email', placeholder='Enter your email address')
+
+        // ------------ Password Textbox ------------- //
+        p
+          label(for='password') Password *
+          input#password(type='password', name='password', placeholder='Enter a strong password')
+
+        br
+
+        // ------------ Submit Button ------------- //
+        input.roundbtn(type='submit', value='Register')
+
+      // ==============  End of Form =================== //

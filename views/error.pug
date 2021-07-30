@@ -1,0 +1,24 @@
+// --------------------------- Layout extended to Error.pug file --------------------------- //
+extends layout
+
+block content
+
+  // --------------------------- 404 Error Message --------------------------- //
+  .travel
+    .cols-row
+      h1.travel__title Oops! It seems you&rsquo;ve taken a wrong turn.
+      h4
+        b
+          | We think you&apos;ve landed in a dead end. 
+          br
+          br
+          | You can take a U-turn.
+        br
+      p.travel__subtitle
+        b Get your journey back on track!
+        br
+
+      // ------------ Link to Home page ------------- //
+      ul.travel__menu
+        li.travel__menu-item
+          a(href='/') Head Home

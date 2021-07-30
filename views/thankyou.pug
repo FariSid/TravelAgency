@@ -1,0 +1,27 @@
+// --------------------------- Layout extended to Thankyou.pug file --------------------------- //
+extends layout
+
+block content
+
+  // --------------------------- Thank you Message --------------------------- //
+  .travelthankyou
+    .cols-row
+      // ------------ Thank the person by name --------------- //
+      h1.travel__title.travel__title--narrow #{name}, Thank you for reaching out to us! 
+      br
+      p.travel__subtitle
+        b
+          | We received your request and
+          br
+          |  will get back to you soon!
+          br
+          br
+          |  For any questions or further assistance, 
+          br
+          | please email us at reachout@travelagency.com
+          br
+
+      // ------------ Link to Home page ------------- //
+      ul.travel__menu
+        li.travel__menu-item
+          a(href='/') Head Home
