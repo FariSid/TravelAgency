@@ -13,10 +13,11 @@
 var mongoose = require('mongoose');
 
 /**
- * Set up a mongoose connection to DB: contacts
+ * Set up a mongoose connection to DB: TravelAgency
  */
 
-var mongoDB = "mongodb://localhost:27017/contacts";
+// var mongoDB = "mongodb://localhost:27017/contacts";
+var mongoDB = "mongodb+srv://Fariha_user:FARIHA_SIDDIQUI@cluster0.9brjs.mongodb.net/TravelAgency?retryWrites=true&w=majority";
 
 /**
  * Require the mongoose unique validator module
