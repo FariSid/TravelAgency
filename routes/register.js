@@ -59,7 +59,7 @@ router.post('/', function (req, res, next) {
       });
     } 
 
-    /* Display Thanks page if no Validation Errors */
+    /* Redirect to Thanks page if no Validation Errors */
     res.render("thanks",{
       name:registerusers.firstname,  // Thank the person by Name
       title: 'Thank You'

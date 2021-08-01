@@ -4,11 +4,11 @@ block content
   // --------------------------- Layout extended to Register.pug file --------------------------- //
 
   //**
-    * Name: Fariha Siddiqui
-    * Student ID: 000880957
-    * Date: 26-07-2021
-    * Purpose: Assignment 1-6 of CPRG-008
-    ** //
+     * Name: Fariha Siddiqui
+     * Student ID: 000880957
+     * Date: 26-07-2021
+     * Purpose: Assignment 1-6 of CPRG-008
+     ** //
 
   // --------------------------- Banner --------------------------- //
   .bannerregister
@@ -23,7 +23,7 @@ block content
       h2(style='color:orange;')
         b Register with us
 
-    // --------------------------- Register Form --------------------------- //
+    // --------------------------- Registration Form --------------------------- //
     .p-lr
       // ------------ Display Validation Errors (if any) ------------- //
       .validation-errors    
@@ -33,31 +33,31 @@ block content
               li= error
 
       // ------------ Redirect submitted values to Register (post) endpoint ------------- //
-      form(action='/register', method='post')
+      form(action='/register' method='post')
 
         // ------------ First Name Textbox ------------- //
         p
           label(for='fname') First Name *
-          input#fname(type='text', name='firstname', placeholder='Enter your first name')
+          input#fname(type='text' name='firstname' placeholder='Enter your first name')
 
         // ------------ Last Name Textbox ------------- //
         p
           label(for='lname') Last Name *
-          input#lname(type='text', name='lastname', placeholder='Enter your last name')
+          input#lname(type='text' name='lastname' placeholder='Enter your last name')
 
         // ------------ Email Address Textbox ------------- //
         p
           label(for='emailadd') Email *
-          input#emailadd(type='text', name='email', placeholder='Enter your email address')
+          input#emailadd(type='text' name='email' placeholder='Enter your email address')
 
         // ------------ Password Textbox ------------- //
         p
           label(for='password') Password *
-          input#password(type='password', name='password', placeholder='Enter a strong password')
+          input#password(type='password' name='password' placeholder='Enter a strong password')
 
         br
 
         // ------------ Submit Button ------------- //
-        input.roundbtn(type='submit', value='Register')
+        input.roundbtn(type='submit' value='Register')
 
       // ==============  End of Form =================== //
